@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nats-ingresss
+  labels:
+    name: nats-ingresss
+spec:
+  rules:
+    - host: nats
+      http:
+        paths:
+          - pathType: Prefix
+            path: "/"
+            backend:
+              service:
+                name: nats
+                port:
+                  number: 6222

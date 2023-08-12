@@ -1,12 +1,14 @@
 ## Kubernetes setup
 - K3s auf oracle?
 - k3s local with ingress
-- Get access to docker images
-Basic setup with helm??
 
-Github Actions
+## Github Actions
 - Build an image
 - Push to dockerthingy
+
+## Kubernetes setup part 2
+- Get access to docker images
+- Basic setup with helm??
 
 ## Monitoring
  - Loki
