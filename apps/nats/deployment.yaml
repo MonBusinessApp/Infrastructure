@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: nats
-          image: <Image>
+          image: nats:2.9
           resources:
             limits:
               memory: "128Mi"
