@@ -21,3 +21,4 @@ spec:
           ports:
             - containerPort: 4222
             - containerPort: 6222
+            - containerPort: 8222
