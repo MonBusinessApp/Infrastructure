@@ -11,6 +11,10 @@ spec:
       labels:
         app: nats
     spec:
+      hostAliases:
+        - ip: 127.0.0.1
+          hostnames:
+            - nats
       containers:
         - name: nats
           image: nats:2.9
