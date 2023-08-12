@@ -6,11 +6,10 @@ metadata:
     name: nats-ingresss
 spec:
   rules:
-    - host: nats
-      http:
+    - http:
         paths:
           - pathType: Prefix
-            path: "/"
+            path: "/nats"
             backend:
               service:
                 name: nats
