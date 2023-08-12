@@ -15,4 +15,4 @@ spec:
               service:
                 name: nats
                 port:
-                  number: 6222
+                  number: 8222
