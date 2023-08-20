@@ -12,6 +12,7 @@ provider "flux" {
   kubernetes = {
     config_path = "~/.kube/config"
   }
+
   git = {
     url = "ssh://git@github.com/MonBusinessApp/Infrastructure.git"
     ssh = {
@@ -22,5 +23,7 @@ provider "flux" {
 }
 
 resource "flux_bootstrap_git" "this" {
-  path = "clusters/local"
+  path             = "clusters/local"
+  components_extra = ["image-reflector-controller", "image-automation-controller"]
+
 }

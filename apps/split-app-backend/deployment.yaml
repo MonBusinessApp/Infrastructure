@@ -14,6 +14,7 @@ spec:
       containers:
         - name: split-app-backend
           image: ghcr.io/diezfx/split-app-backend:main
+          imagePullPolicy: Always
           resources:
             limits:
               memory: "128Mi"
