@@ -11,9 +11,9 @@ spec:
     - http:
         paths:
           - pathType: Prefix
-            path: "/split"
+            path: "/spliter"
             backend:
               service:
                 name: split-app-backend
                 port:
-                  name: api
+                  number: 8080
