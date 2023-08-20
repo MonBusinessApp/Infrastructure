@@ -16,4 +16,4 @@ spec:
               service:
                 name: split-app-backend
                 port:
-                  number: 8080
+                  name: api
