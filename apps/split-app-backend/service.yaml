@@ -6,6 +6,6 @@ spec:
   selector:
     app: split-app-backend
   ports:
-    - port: 8080
+    - port: 80
       name: api
       targetPort: 8080
