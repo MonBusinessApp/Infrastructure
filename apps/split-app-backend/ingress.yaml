@@ -11,7 +11,7 @@ spec:
     - http:
         paths:
           - pathType: Prefix
-            path: "/spliter"
+            path: "split"
             backend:
               service:
                 name: split-app-backend
