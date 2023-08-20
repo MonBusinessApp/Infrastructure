@@ -48,6 +48,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: split-app-backend
+                name: whoami
                 port:
-                  name: api
+                  name: web

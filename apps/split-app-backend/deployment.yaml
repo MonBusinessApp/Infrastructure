@@ -23,7 +23,7 @@ spec:
               cpu: "500m"
           ports:
             - name: api
-              containerPort: 8080
+              containerPort: 80
           env:
             - name: ENVIRONMENT
               value: "dev"
