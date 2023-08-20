@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: split-app-backend-ingresss
+  name: splitappbackendingresss
 spec:
   rules:
     - http:
@@ -10,6 +10,6 @@ spec:
             path: /split
             backend:
               service:
-                name: split-app-backend
+                name: splitappbackend
                 port:
                   name: api

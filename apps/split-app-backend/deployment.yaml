@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: split-app-backend
+  name: splitappbackend
   labels:
-    app: split-app-backend
+    app: splitappbackend
 spec:
   selector:
     matchLabels:
-      app: split-app-backend
+      app: splitappbackend
   template:
     metadata:
       labels:
-        app: split-app-backend
+        app: splitappbackend
     spec:
       containers:
-        - name: split-app-backend
+        - name: splitappbackend
           image: ghcr.io/diezfx/split-app-backend:main
           imagePullPolicy: Always
           resources:
