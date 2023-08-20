@@ -8,4 +8,4 @@ spec:
   ports:
     - port: 80
       name: api
-      targetPort: 8080
+      targetPort: api

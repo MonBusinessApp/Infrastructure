@@ -4,12 +4,14 @@ metadata:
   name: split-app-backend-ingresss
   labels:
     name: split-app-backend-ingresss
+  annotations:
+    traefik.frontend.rule.type: pathprefixstrip
 spec:
   rules:
     - http:
         paths:
           - pathType: Prefix
-            path: "/split/"
+            path: /split
             backend:
               service:
                 name: split-app-backend

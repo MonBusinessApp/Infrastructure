@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: split-app-backend
+  labels:
+    app: split-app-backend
 spec:
   selector:
     matchLabels:
@@ -20,7 +22,8 @@ spec:
               memory: "128Mi"
               cpu: "500m"
           ports:
-            - containerPort: 8080
+            - name: api
+              containerPort: 80
           env:
             - name: ENVIRONMENT
               value: "dev"
