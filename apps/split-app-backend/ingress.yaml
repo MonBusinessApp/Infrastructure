@@ -2,10 +2,6 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: split-app-backend-ingresss
-  labels:
-    name: split-app-backend-ingresss
-  annotations:
-    traefik.frontend.rule.type: pathprefixstrip
 spec:
   rules:
     - http:
