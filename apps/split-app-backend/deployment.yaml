@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: split-app-backend
+spec:
+  selector:
+    matchLabels:
+      app: split-app-backend
+  template:
+    metadata:
+      labels:
+        app: split-app-backend
+    spec:
+      containers:
+        - name: split-app-backend
+          image: ghcr.io/diezfx/split-app-backend:main
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+          ports:
+            - containerPort: 8080
