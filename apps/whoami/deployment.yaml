@@ -41,6 +41,7 @@ kind: Ingress
 metadata:
   name: whoami-ingress
 spec:
+  ingressClassName: nginx
   rules:
     - http:
         paths:

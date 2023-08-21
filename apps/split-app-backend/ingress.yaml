@@ -3,6 +3,7 @@ kind: Ingress
 metadata:
   name: split-app-backend-ingresss
 spec:
+  ingressClassName: nginx
   rules:
     - http:
         paths:
