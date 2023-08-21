@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: splitappbackend
+  name: split-app-backend
 spec:
   selector:
-    app: splitappbackend
+    app: split-app-backend
   ports:
     - port: 80
       name: api
