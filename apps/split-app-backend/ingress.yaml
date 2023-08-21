@@ -11,6 +11,6 @@ spec:
             path: /split
             backend:
               service:
-                name: split-app-backend
+                name: split-app-backend-service
                 port:
                   name: api

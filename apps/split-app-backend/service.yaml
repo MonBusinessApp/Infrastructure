@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: split-app-backend
+  name: split-app-backend-service
 spec:
   selector:
     app: split-app-backend
