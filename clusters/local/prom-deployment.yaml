@@ -24,6 +24,6 @@ spec:
         name: prometheus-community
         namespace: flux-system
       interval: 1m
-    targetNamespace: prometheus
+  targetNamespace: prometheus
   values:
     replicaCount: 1
