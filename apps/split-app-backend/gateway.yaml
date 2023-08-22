@@ -32,4 +32,4 @@ spec:
         - destination:
             host: split-app-backend
             port:
-              name: api
+              number: 8080
