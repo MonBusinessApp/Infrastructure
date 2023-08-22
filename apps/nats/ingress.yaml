@@ -18,12 +18,3 @@ spec:
                 name: nats
                 port:
                   number: 8222
----
-apiVersion: traefik.io/v1alpha1
-kind: Middleware
-metadata:
-  name: nats-stripprefix
-spec:
-  stripPrefix:
-    prefixes:
-      - /nats

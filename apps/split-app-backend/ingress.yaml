@@ -13,12 +13,3 @@ spec:
                 name: split-app-backend-service
                 port:
                   name: api
----
-apiVersion: traefik.io/v1alpha1
-kind: Middleware
-metadata:
-  name: split-app-backend-stripprefix
-spec:
-  stripPrefix:
-    prefixes:
-      - /split
