@@ -28,6 +28,8 @@ spec:
     - match:
         - uri:
             prefix: /split
+      rewrite:
+        uri: "/"
       route:
         - destination:
             host: split-app-backend-service
