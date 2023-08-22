@@ -4,7 +4,7 @@ metadata:
   name: prometheus-community
   namespace: flux-system
 spec:
-  interval: 1m
+  interval: 10m
   url: https://prometheus-community.github.io/helm-charts
 
 ---
@@ -14,7 +14,7 @@ metadata:
   name: prometheus
   namespace: default
 spec:
-  interval: 10m
+  interval: 1m
   chart:
     spec:
       chart: kube-prometheus-stack
@@ -23,7 +23,7 @@ spec:
         kind: HelmRepository
         name: prometheus-community
         namespace: flux-system
-      interval: 10m
+      interval: 1m
     targetNamespace: prometheus
   values:
     replicaCount: 1
