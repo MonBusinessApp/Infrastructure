@@ -31,7 +31,7 @@ metadata:
   namespace: flux-system
 spec:
   images:
-    - name: split-app-backend
+    - name: ghcr.io/diezfx/split-app-backend
       newTag: main-2f9f65db-1692819601 # {"$imagepolicy": "flux-system:split-app-backend:tag"}
   interval: 5m0s
   path: ./apps/split-app-backend
