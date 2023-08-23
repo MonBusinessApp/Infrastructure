@@ -1,0 +1,26 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: split-app-backend-ingresss
+spec:
+  rules:
+    - http:
+        paths:
+          - pathType: Prefix
+            path: /split
+            backend:
+              service:
+                name: split-app-backend-service
+                port:
+                  name: api
+
+---
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
+metadata:
+  name: split-app-backend-stripprefix
+spec:
+  stripPrefix:
+    prefixes:
+      - /split
