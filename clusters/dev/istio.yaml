@@ -85,9 +85,9 @@ spec:
         name: istio
         namespace: istio-system
       interval: 1m
-      values:
-        labels:
-          istio: ingressgateway
+  values:
+    labels:
+      istio: ingressgateway
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
