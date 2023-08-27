@@ -34,7 +34,7 @@ apiVersion: cert-manager.io/v1
 kind: ClusterIssuer
 metadata:
   name: letsencrypt-prod-cluster
-  namespace: istio-ingress
+  namespace: cert-manager
 spec:
   acme:
     email: psiron12@gmail.com
@@ -50,7 +50,7 @@ apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: duckdns-domain-cert-prod
-  namespace: istio-ingress
+  namespace: cert-manager
 spec:
   secretName: duckdns-domain-cert-prod
   duration: 2160h # 90d
