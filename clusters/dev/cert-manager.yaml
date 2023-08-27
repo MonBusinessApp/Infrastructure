@@ -45,7 +45,8 @@ spec:
       name: letsencrypt-prod-cluster
     solvers:
       - http01:
-          ingressClass: istio
+          ingress:
+            class: istio
 ---
 apiVersion: cert-manager.io/v1
 kind: Certificate
