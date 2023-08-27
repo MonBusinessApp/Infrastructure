@@ -23,24 +23,24 @@
 #        credentialName: duckdns-domain-cert-prod
 #      hosts:
 #        - "*"
----
-apiVersion: networking.istio.io/v1alpha3
-kind: VirtualService
-metadata:
-  name: split-app-backend
-spec:
-  hosts:
-    - "*"
-  gateways:
-    - split-app-backend-gateway
-  http:
-    - match:
-        - uri:
-            prefix: /split/
-      rewrite:
-        uri: "/"
-      route:
-        - destination:
-            host: split-app-backend-service
-            port:
-              number: 80
+#---
+#apiVersion: networking.istio.io/v1alpha3
+#kind: VirtualService
+#metadata:
+#  name: split-app-backend
+#spec:
+#  hosts:
+#    - "*"
+#  gateways:
+#    - split-app-backend-gateway
+#  http:
+#    - match:
+#        - uri:
+#            prefix: /split/
+#      rewrite:
+#        uri: "/"
+#      route:
+#        - destination:
+#            host: split-app-backend-service
+#            port:
+#              number: 80
