@@ -81,7 +81,6 @@ spec:
     - port:
         number: 80
         protocol: HTTP
-        name: http-80-ingress-cm-acme-http-solver-z8lxj-cert-manager
       hosts:
         - "*"
   selector:
