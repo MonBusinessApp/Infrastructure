@@ -27,9 +27,8 @@ spec:
         name: cert-manager
         namespace: cert-manager
       interval: 1m
-      values:
-        installCRDs: true
-        nix: nix
+  values:
+    installCRDs: true
 ---
 apiVersion: cert-manager.io/v1
 kind: ClusterIssuer
