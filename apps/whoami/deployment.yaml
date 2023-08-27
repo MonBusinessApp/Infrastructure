@@ -4,8 +4,6 @@ metadata:
   name: whoami
   labels:
     app: whoami
-  annotations:
-    sidecar.istio.io/inject: "false"
 
 spec:
   replicas: 1
