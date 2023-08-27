@@ -20,7 +20,7 @@ spec:
         protocol: HTTPS
       tls:
         mode: SIMPLE
-        credentialName: duckdns-domain-cert-prod
+        credentialName: duckdns-domain-cert-prod-8464z
       hosts:
         - "*"
 ---
