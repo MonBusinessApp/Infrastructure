@@ -69,19 +69,3 @@ spec:
     name: letsencrypt-prod-cluster
     kind: ClusterIssuer
     group: cert-manager.io
-
----
-kind: Gateway
-apiVersion: networking.istio.io/v1beta1
-metadata:
-  name: cm-acme-http-solver-z8lxj
-  namespace: istio-system
-spec:
-  servers:
-    - port:
-        number: 80
-        protocol: HTTP
-      hosts:
-        - "*"
-  selector:
-    istio: ingress
