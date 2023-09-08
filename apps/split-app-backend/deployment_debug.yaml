@@ -31,7 +31,7 @@ spec:
           resources:
             limits:
               memory: "128Mi"
-              cpu: "500m"
+              cpu: "300m"
           volumeMounts:
             - mountPath: /etc/config/postgres
               name: json-configmap-volume
