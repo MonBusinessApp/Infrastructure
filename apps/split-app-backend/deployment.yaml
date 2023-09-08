@@ -12,6 +12,10 @@ spec:
     metadata:
       labels:
         app: split-app-backend
+      volumes:
+        - name: json-configmap-volume
+          configMap:
+            name: postgres
     spec:
       containers:
         - name: split-app-backend
@@ -21,6 +25,9 @@ spec:
             limits:
               memory: "128Mi"
               cpu: "500m"
+          volumeMounts:
+            - mountPath: /etc/config
+              name: json-configmap-volume
           ports:
             - name: api
               containerPort: 8080
