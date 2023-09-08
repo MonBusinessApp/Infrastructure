@@ -1,17 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: split-app-backend
+  name: testing
   labels:
-    app: split-app-backend
+    app: testing
 spec:
   selector:
     matchLabels:
-      app: split-app-backend
+      app: testing
   template:
     metadata:
       labels:
-        app: split-app-backend
+        app: testing
     spec:
       volumes:
         - name: json-configmap-volume
@@ -21,9 +21,13 @@ spec:
           secret:
             secretName: postgres
       containers:
-        - name: split-app-backend
-          image: ghcr.io/diezfx/split-app-backend:main
+        - name: testing
+          image: ubuntu:latest
           imagePullPolicy: Always
+
+          # Just spin & wait forever
+          command: ["/bin/bash", "-c", "--"]
+          args: ["while true; do sleep 30; done;"]
           resources:
             limits:
               memory: "128Mi"
