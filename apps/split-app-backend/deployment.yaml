@@ -31,7 +31,7 @@ spec:
           volumeMounts:
             - mountPath: /etc/config
               name: json-configmap-volume
-            - mountPath: /etc/secret/postgres
+            - mountPath: /etc/secrets/postgres
               name: postgres-secret-volume
           ports:
             - name: api

@@ -33,9 +33,9 @@ spec:
               memory: "128Mi"
               cpu: "300m"
           volumeMounts:
-            - mountPath: /etc/config/postgres
+            - mountPath: /etc/config
               name: json-configmap-volume
-            - mountPath: /etc/secret/postgres
+            - mountPath: /etc/secrets/postgres
               name: postgres-secret-volume
           ports:
             - name: api
