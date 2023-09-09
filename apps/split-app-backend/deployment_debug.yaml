@@ -16,7 +16,7 @@ spec:
       volumes:
         - name: json-configmap-volume
           configMap:
-            name: postgres
+            name: split-app-config
         - name: postgres-secret-volume
           secret:
             secretName: postgres
