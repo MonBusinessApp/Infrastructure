@@ -14,7 +14,7 @@ spec:
         app: split-app-backend
     spec:
       volumes:
-        - name: split-app-config
+        - name: postgres-config-volume
           configMap:
             name: postgres
         - name: postgres-secret-volume
@@ -30,7 +30,7 @@ spec:
               cpu: "300m"
           volumeMounts:
             - mountPath: /etc/config
-              name: json-configmap-volume
+              name: postgres-config-volume
             - mountPath: /etc/secrets/postgres
               name: postgres-secret-volume
           ports:
