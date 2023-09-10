@@ -30,7 +30,7 @@ metadata:
 spec:
   images:
     - name: ghcr.io/diezfx/split-app-backend
-      newTag: main-87e63bd9-1694362770 # {"$imagepolicy": "flux-system:split-app-backend:tag"}
+      newTag: main-5c2b31fe-1694365531 # {"$imagepolicy": "flux-system:split-app-backend:tag"}
   interval: 5m0s
   path: ./apps/split-app-backend
   prune: true
