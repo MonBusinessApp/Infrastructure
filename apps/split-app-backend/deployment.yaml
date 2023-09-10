@@ -20,6 +20,9 @@ spec:
         - name: postgres-secret-volume
           secret:
             secretName: postgres
+        - name: supabase-secret-volume
+          secret:
+            secretName: supabase
       containers:
         - name: split-app-backend
           image: ghcr.io/diezfx/split-app-backend:main
@@ -33,6 +36,8 @@ spec:
               name: postgres-config-volume
             - mountPath: /etc/secrets/postgres
               name: postgres-secret-volume
+            - mountPath: /etc/secrets/supabase
+              name: supabase-secret-volume
           ports:
             - name: api
               containerPort: 8080
