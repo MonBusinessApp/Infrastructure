@@ -2,7 +2,7 @@ terraform {
   required_providers {
     flux = {
       source  = "fluxcd/flux"
-      version = ">=1.0"
+      version = ">=1.2"
     }
   }
 }
@@ -25,5 +25,6 @@ provider "flux" {
 resource "flux_bootstrap_git" "this" {
   path             = "clusters/dev"
   components_extra = ["image-reflector-controller", "image-automation-controller"]
+  version          = "v2.2.2"
 
 }
